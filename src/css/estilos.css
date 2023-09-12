@@ -102,17 +102,19 @@ img {
 }
 
 /**Contenedores sobre el tema*/
-#Contenedor_Tema {
+.Contenedor_Tema {
     display: flex;
     flex-direction: column;
 }
-.contenedor_tema{
+
+.contenedor_tema {
     display: grid;
     grid-template-columns: repeat(2, auto);
     color: #fff;
     margin: 10px 10%;
 }
-.contenedor_tema p{
+
+.contenedor_tema p {
     margin: auto;
     margin-right: 10%;
     margin-right: 10%;
@@ -122,6 +124,22 @@ img {
 /*!Se espera parte complementaria de compañera*/
 
 /**Proyectos*/
-.img_proyectos{
+.img_proyectos {
     width: 50%;
 }
+
+/**Contacto*/
+#Contacto{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 10px 10%;
+}
+.titulo_contacto_white{
+    font-size: 1.7rem;
+}
+.contacto2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+

@@ -2,6 +2,7 @@ import { Buttons } from "../components/main";
 import { TituloBlanco, TituloMorado } from "../components/nav";
 import { scrolling } from "../js/funciones";
 import programador from "../img/programador1.svg";
+import programador2 from "../img/programador2.png"
 
 export function Main() {
   return (
@@ -21,7 +22,7 @@ export function Main() {
           <img src={programador} alt="Programador" />
         </div>
       </section>
-      <section id="Tecnologías Contenedor_Tema">
+      <section id="Tecnologías" className="Contenedor_Tema">
         <TituloMorado contenido="Tecnologías" clase="titulo_complemento" />
         <div className="contenedor_tema">
           <p>
@@ -38,10 +39,11 @@ export function Main() {
         </div>
         {/* Se espera contenido complementario */}
       </section>
-      <section id="Proyectos Contenedor_Tema">
+      <section id="Proyectos" className="Contenedor_Tema">
         <TituloMorado contenido="Proyectos" clase="titulo_complemento" />
         <div className="contenedor_tema">
-          <img className="img_proyectos"
+          <img
+            className="img_proyectos"
             src="https://userscontent2.emaze.com/images/a4f075c1-ae43-4cad-99c0-82540c64af73/ccfbc78c-31bc-42a2-941c-1450cd28b0de.gif"
             alt=""
           />
@@ -54,6 +56,27 @@ export function Main() {
           </p>
         </div>
         {/* Se espera contenido complementario */}
+      </section>
+      <section id="Contacto">
+        <aside className="contacto">
+          <div className="contacto_div">
+            <TituloBlanco
+              contenido="UserGitHub"
+              clase="titulo_contacto_white"
+            />
+            {/* Se espera contenido complementario aqui */}
+          </div>
+          <img
+            className="imagen contacto"
+            src={programador2}
+            alt="Programador"
+          />
+        </aside>
+        <aside className="contacto2">
+          <TituloMorado contenido="Contacto" clase="" />
+          {/*  Se espera contenido complementario*/}
+          <Buttons contenido="Contactar" />
+        </aside>
       </section>
     </main>
   );
