@@ -8,13 +8,16 @@
 header {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    padding: 10px;
+    padding: 30px;
     text-align: center;
+}
+
+.header_titulo {
+    display: flex;
 }
 
 /**Titulos*/
 .titulo_blanco {
-    display: flex;
     padding: 20px;
     margin-top: auto;
     margin-bottom: auto;
@@ -23,11 +26,14 @@ header {
 }
 
 .titulo_morado {
-    color: #9340ff;
+    color: #9340ff !important;
 }
 
-.titulo_large {
-    font-size: 4rem;
+.titulo_complemento {
+    text-align: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    margin-top: 20px;
 }
 
 nav {
@@ -39,9 +45,83 @@ nav {
 .nav_url {
     padding: 10px;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .nav_url:hover {
     color: #9340ff;
+}
+
+/**Sobre Mi*/
+#Sobre-Mi {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+    margin: 50px 10%;
+
+}
+
+.div_contenido {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    margin: auto;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.titulo_sobre_mi {
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    width: 20rem;
+}
+
+/**Boton*/
+.boton {
+    color: #fff;
+    font-size: large;
+    margin: 35px auto;
+    background-image: linear-gradient(to right, #7b4397 0%, #dc2430 51%, #7b4397 100%);
+    padding: 20px 65px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #eee;
+}
+
+.boton:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+/**Contenedores sobre el tema*/
+#Contenedor_Tema {
+    display: flex;
+    flex-direction: column;
+}
+.contenedor_tema{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    color: #fff;
+    margin: 10px 10%;
+}
+.contenedor_tema p{
+    margin: auto;
+    margin-right: 10%;
+    margin-right: 10%;
+    font-size: 1.3rem;
+}
+
+/*!Se espera parte complementaria de compañera*/
+
+/**Proyectos*/
+.img_proyectos{
+    width: 50%;
 }
