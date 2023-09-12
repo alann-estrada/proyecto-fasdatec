@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Importantee
+Antes de ejecutar el proyecto instale dependencias necesarias para ejecutar el proyecto: 
+## `npm install`
+recuerde que todo debe de ser dentro de la carpeta del repositorio
+
 ## Available Scripts
 
 In the project directory, you can run:
