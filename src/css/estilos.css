@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #101728;
+}
+
+/**Nav*/
+header {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding: 10px;
+    text-align: center;
+}
+
+/**Titulos*/
+.titulo_blanco {
+    display: flex;
+    padding: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.titulo_morado {
+    color: #9340ff;
+}
+
+.titulo_large {
+    font-size: 4rem;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding: 20px;
+}
+
+.nav_url {
+    padding: 10px;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.nav_url:hover {
+    color: #9340ff;
+}
