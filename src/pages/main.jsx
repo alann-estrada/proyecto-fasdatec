@@ -1,8 +1,8 @@
-import { Buttons } from "../components/main";
+import { Buttons, Tecnologias } from "../components/main";
 import { TituloBlanco, TituloMorado } from "../components/nav";
 import { scrolling } from "../js/funciones";
 import programador from "../img/programador1.svg";
-import programador2 from "../img/programador2.png"
+import programador2 from "../img/programador2.png";
 
 export function Main() {
   return (
@@ -37,7 +37,36 @@ export function Main() {
             alt=""
           />
         </div>
-        {/* Se espera contenido complementario */}
+        <div className="tecnologias_contenido">
+          <Tecnologias
+            contenido_titulo="Algunas tecnologias:"
+            clase_titulo="titulo_tecnologias"
+            clase_contenedor="div_tecnologias"
+            lenguaje={[
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "SQL",
+              "Java",
+              "Python",
+              "C++",
+            ]}
+          />
+          <Tecnologias
+            contenido_titulo="Junto algunas librerias como:"
+            clase_titulo="titulo_tecnologias"
+            clase_contenedor="div_tecnologias2"
+            lenguaje={[
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "SQL",
+              "Java",
+              "Python",
+              "C++",
+            ]}
+          />
+        </div>
       </section>
       <section id="Proyectos" className="Contenedor_Tema">
         <TituloMorado contenido="Proyectos" clase="titulo_complemento" />
@@ -58,7 +87,7 @@ export function Main() {
         {/* Se espera contenido complementario */}
       </section>
       <section id="Contacto">
-        <aside className="contacto">
+        <aside>
           <div className="contacto_div">
             <TituloBlanco
               contenido="UserGitHub"
@@ -66,11 +95,13 @@ export function Main() {
             />
             {/* Se espera contenido complementario aqui */}
           </div>
-          <img
-            className="imagen contacto"
-            src={programador2}
-            alt="Programador"
-          />
+          <div className="contenedor_img_contacto">
+            <img
+              className="imagen_contacto"
+              src={programador2}
+              alt="Programador"
+            />
+          </div>
         </aside>
         <aside className="contacto2">
           <TituloMorado contenido="Contacto" clase="" />

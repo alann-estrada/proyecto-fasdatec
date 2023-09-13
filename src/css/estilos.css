@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     background-color: #101728;
+    color: #fff;
 }
 
 /**Nav*/
@@ -21,7 +22,6 @@ header {
     padding: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    color: #fff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
@@ -44,7 +44,6 @@ nav {
 
 .nav_url {
     padding: 10px;
-    color: white;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -68,7 +67,6 @@ nav {
     display: grid;
     grid-template-rows: repeat(3, auto);
     margin: auto;
-    color: #fff;
     font-size: 1.5rem;
 }
 
@@ -83,7 +81,6 @@ img {
 
 /**Boton*/
 .boton {
-    color: #fff;
     font-size: large;
     margin: 35px auto;
     background-image: linear-gradient(to right, #7b4397 0%, #dc2430 51%, #7b4397 100%);
@@ -97,7 +94,6 @@ img {
 
 .boton:hover {
     background-position: right center;
-    color: #fff;
     text-decoration: none;
 }
 
@@ -110,7 +106,6 @@ img {
 .contenedor_tema {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    color: #fff;
     margin: 10px 10%;
 }
 
@@ -121,25 +116,70 @@ img {
     font-size: 1.3rem;
 }
 
-/*!Se espera parte complementaria de compañera*/
+.tecnologias_contenido {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 10px 10%;
+}
+
+.titulo_tecnologias {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.div_tecnologias {
+    font-size: 1.3rem;
+}
+
+.div_tecnologias2 ul li {
+    margin-right: 10%;
+}
+
+.div_tecnologias ul li {
+    margin-left: 10%;
+}
+
+.div_tecnologias2 {
+    font-size: 1.3rem;
+    text-align: end;
+}
+
+li {
+    list-style: none;
+}
 
 /**Proyectos*/
 .img_proyectos {
     width: 50%;
 }
 
+/*!Se espera parte complementaria de compañera*/
+
 /**Contacto*/
-#Contacto{
+#Contacto {
     display: grid;
     grid-template-columns: repeat(2, auto);
     margin: 10px 10%;
 }
-.titulo_contacto_white{
+
+.titulo_contacto_white {
     font-size: 1.7rem;
 }
-.contacto2{
+
+/**Se esperan clases del componente aqui*/
+.contacto_div {}
+
+.contenedor_img_contacto {
+    display: flex;
+}
+
+.imagen_contacto {
+    margin: auto;
+    align-items: center;
+}
+
+.contacto2 {
     text-align: center;
     display: flex;
     flex-direction: column;
 }
-
