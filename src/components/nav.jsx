@@ -5,6 +5,12 @@ export function NavURL({contenido}) {
   return <a className="nav_url" onClick={() => scrolling(contenido)}>{contenido}</a>;
 }
 
-export function TituloBlanco({contenido}){
-  return <h1 className="titulo_blanco">{contenido}</h1>
+export function TituloBlanco({contenido, clase}){
+  const clases = `titulo_blanco ${clase}`; 
+  return <h1 className={clases}>{contenido}</h1>
+}
+
+export function TituloMorado({ contenido, clase }) {
+  const clases = `titulo_morado titulo_blanco ${clase}`;
+  return <h1 className={clases}>{contenido}</h1>;
 }
