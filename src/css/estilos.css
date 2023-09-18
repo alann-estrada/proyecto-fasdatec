@@ -59,13 +59,11 @@ nav {
 
 /**Sobre Mi*/
 #Sobre-Mi {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+    display: flex;
     align-items: center;
     justify-items: center;
     gap: 30px;
     margin: 50px 10%;
-
 }
 
 .div_contenido {
@@ -109,8 +107,7 @@ img {
 }
 
 .contenedor_tema {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+    display: flex;
 
 }
 
@@ -174,7 +171,8 @@ li {
     margin: -20px auto;
 }
 
-.cards, .cards * {
+.cards,
+.cards * {
     background-color: #0f1819;
     border-radius: 30px;
 }
@@ -221,7 +219,6 @@ li {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(174deg) brightness(102%) contrast(102%);
 }
 
-/**Se esperan clases del componente aqui*/
 
 .contenedor_img_contacto {
     display: flex;
@@ -253,4 +250,29 @@ form input {
     border: #fff solid 2px;
     color: #fff;
     height: 1.5rem;
+}
+
+/**Media Query's*/
+@media screen and (max-width:900px) {
+    header{
+        grid-template-columns: repeat(1,auto);
+    }
+    #Sobre-Mi {
+        flex-direction: column-reverse;
+    }
+    .contenedor_tema{
+        flex-direction: column-reverse;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .proyectos_cards{
+        grid-template-columns: repeat(1, auto);
+        text-align: center;
+        align-items: center;
+    }
+    #Contacto{
+        grid-template-columns: repeat(1, auto);
+    }
 }
