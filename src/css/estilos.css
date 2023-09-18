@@ -274,7 +274,7 @@ form input {
     }
 
     .tecnologias_contenido {
-        grid-template-columns: repeat(1, autogit );
+        grid-template-columns: repeat(1, auto );
     }
 
     .proyectos_cards {
