@@ -202,7 +202,8 @@ li {
 }
 
 .contacto_div {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-content: center;
     margin: auto;
@@ -287,5 +288,12 @@ form input {
 
     #Contacto {
         grid-template-columns: repeat(1, auto);
+    }
+    .contacto_div{
+        grid-template-columns: repeat(1, auto);
+    }
+    .contacto_div_links{
+        display: flex;
+        flex-direction: row;
     }
 }
