@@ -258,15 +258,28 @@ form input {
     * {
         align-items: center;
     }
-    nav{
+
+    .titulo_blanco {
+        text-align: center;
+        margin: auto;
+    }
+
+    nav {
         grid-template-columns: repeat(1, auto);
     }
+
     header {
         grid-template-columns: repeat(1, auto);
     }
 
     #Sobre-Mi {
         flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .contenedor_tema p {
+        margin: auto;
+        margin-right: 5%;
     }
 
     .contenedor_tema {
@@ -277,7 +290,7 @@ form input {
     }
 
     .tecnologias_contenido {
-        grid-template-columns: repeat(1, auto );
+        grid-template-columns: repeat(1, auto);
     }
 
     .proyectos_cards {
@@ -289,10 +302,12 @@ form input {
     #Contacto {
         grid-template-columns: repeat(1, auto);
     }
-    .contacto_div{
+
+    .contacto_div {
         grid-template-columns: repeat(1, auto);
     }
-    .contacto_div_links{
+
+    .contacto_div_links {
         display: flex;
         flex-direction: row;
     }
