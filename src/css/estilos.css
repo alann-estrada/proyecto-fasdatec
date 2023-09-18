@@ -257,7 +257,9 @@ form input {
     * {
         align-items: center;
     }
-
+    nav{
+        grid-template-columns: repeat(1, auto);
+    }
     header {
         grid-template-columns: repeat(1, auto);
     }
