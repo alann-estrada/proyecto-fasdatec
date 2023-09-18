@@ -1,7 +1,7 @@
-import Buttons from "../components/buttons"
-import Cards from "../components/cards"
-import Form from "../components/form"
-import RedesS from "../components/redes"
+import Buttons from "../components/buttons";
+import Cards from "../components/cards";
+import Form from "../components/form";
+import RedesS from "../components/redes";
 import Tecnologias from "../components/technologies";
 
 import TituloBlanco from "../components/tituloBlanco";
@@ -9,7 +9,6 @@ import { scrolling } from "../js/funciones";
 import programador from "../img/programador1.svg";
 import programador2 from "../img/programador2.png";
 import TituloMorado from "../components/tituloMorado";
-
 
 export function Main() {
   return (
@@ -103,37 +102,38 @@ export function Main() {
       <section id="Contacto">
         <aside>
           <div className="contacto_div">
-            <TituloBlanco
-              contenido="UserGitHub"
-              clase="titulo_contacto_white"
-            />
-            {/* Se espera contenido complementario aqui */}
-            <RedesS
-              red_social={[
-                "Linkedin",
-                "Instagram",
-                "Facebook",
-                "Twitter",
-                "WhatsApp",
-                "GitHub",
-              ]}
-              href={[
-                "https://mx.linkedin.com/",
-                "https://instagram.com",
-                "https://facebook.com",
-                "https://x.com",
-                "https://whatsapp.com",
-                "https://github.com",
-              ]}
-              src={[
-                "https://th.bing.com/th/id/R.c56ac73b4815a49008272f97d158b4e1?rik=zSkBLTkR4Ke2Cg&pid=ImgRaw&r=0",
-                "https://th.bing.com/th/id/R.4af42c87858bf65a60f6632aaf366a2f?rik=UxA5%2fEyi7b1yeg&pid=ImgRaw&r=0",
-                "https://gfsconsultores.com.mx/images/facebook_black.png",
-                "https://www.drodd.com/images14/x10.png",
-                "https://imagensemoldes.com.br/wp-content/uploads/2020/04/WhatsApp-%C3%8Dcone-Preto-PNG.png",
-                "https://d1fdloi71mui9q.cloudfront.net/wEwO2OpySGSPNjM5biot_undefined",
-              ]}
-            />
+              <TituloBlanco
+                contenido="UserGitHub"
+                clase="titulo_contacto_white"
+              />
+            <div className="contacto_div_links">
+              <RedesS
+                red_social={[
+                  "Linkedin",
+                  "Instagram",
+                  "Facebook",
+                  "Twitter",
+                  "WhatsApp",
+                  "GitHub",
+                ]}
+                href={[
+                  "https://mx.linkedin.com/",
+                  "https://instagram.com",
+                  "https://facebook.com",
+                  "https://x.com",
+                  "https://whatsapp.com",
+                  "https://github.com",
+                ]}
+                src={[
+                  "https://th.bing.com/th/id/R.c56ac73b4815a49008272f97d158b4e1?rik=zSkBLTkR4Ke2Cg&pid=ImgRaw&r=0",
+                  "https://th.bing.com/th/id/R.4af42c87858bf65a60f6632aaf366a2f?rik=UxA5%2fEyi7b1yeg&pid=ImgRaw&r=0",
+                  "https://gfsconsultores.com.mx/images/facebook_black.png",
+                  "https://www.drodd.com/images14/x10.png",
+                  "https://imagensemoldes.com.br/wp-content/uploads/2020/04/WhatsApp-%C3%8Dcone-Preto-PNG.png",
+                  "https://d1fdloi71mui9q.cloudfront.net/wEwO2OpySGSPNjM5biot_undefined",
+                ]}
+              />
+            </div>
           </div>
           <div className="contenedor_img_contacto">
             <img
