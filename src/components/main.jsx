@@ -15,7 +15,7 @@ export function Tecnologias({
   clase_contenedor,
   lenguaje,
 }) {
-  fetch("http://localhost:3000/api/colors")
+  fetch("https://api-colors-4t6q-dev.fl0.io/api/colorsgit ")
     .then((response) => response.json())
     .then((languageColors) => {
       const languageElements = document.querySelectorAll(".language");
