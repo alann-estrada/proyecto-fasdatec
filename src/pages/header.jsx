@@ -1,4 +1,6 @@
-import { NavURL, TituloBlanco } from "../components/nav";
+import { NavURL } from "../components/nav";
+import TituloBlanco from "../components/tituloBlanco";
+
 
 export function Header() {
   return (

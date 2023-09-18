@@ -1,8 +1,15 @@
-import { Buttons, Cards, Form, RedesS, Tecnologias } from "../components/main";
-import { TituloBlanco, TituloMorado } from "../components/nav";
+import Buttons from "../components/buttons"
+import Cards from "../components/cards"
+import Form from "../components/form"
+import RedesS from "../components/redes"
+import Tecnologias from "../components/technologies";
+
+import TituloBlanco from "../components/tituloBlanco";
 import { scrolling } from "../js/funciones";
 import programador from "../img/programador1.svg";
 import programador2 from "../img/programador2.png";
+import TituloMorado from "../components/tituloMorado";
+
 
 export function Main() {
   return (
