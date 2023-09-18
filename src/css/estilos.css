@@ -5,6 +5,10 @@
     color: #fff;
 }
 
+main {
+    margin: 10px 10%;
+}
+
 /**Nav*/
 header {
     display: grid;
@@ -15,6 +19,7 @@ header {
 
 .header_titulo {
     display: flex;
+    text-shadow: 0 0 10px, 0 0 20px, 0 0 30px;
 }
 
 /**Titulos*/
@@ -22,7 +27,7 @@ header {
     padding: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .titulo_morado {
@@ -106,7 +111,7 @@ img {
 .contenedor_tema {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    margin: 10px 10%;
+
 }
 
 .contenedor_tema p {
@@ -119,7 +124,6 @@ img {
 .tecnologias_contenido {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    margin: 10px 10%;
 }
 
 .titulo_tecnologias {
@@ -148,26 +152,76 @@ li {
     list-style: none;
 }
 
+.language {
+    text-shadow: 0 0 5px, 0 0 10px, 0 0 15px;
+    padding: 5px;
+}
+
 /**Proyectos*/
 .img_proyectos {
     width: 50%;
 }
 
-/*!Se espera parte complementaria de compañera*/
+.proyectos_cards {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin: 60px auto;
+    gap: 20px;
+}
+
+.tituloMorado_cards {
+    font-size: 2rem;
+    margin: -20px auto;
+}
+
+.cards, .cards * {
+    background-color: #0f1819;
+    border-radius: 30px;
+}
+
+.cards p {
+    margin: 5%;
+}
+
+.cards img {
+    width: 14rem;
+    border-radius: 20px;
+    margin: 5%;
+}
+
+
 
 /**Contacto*/
 #Contacto {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    margin: 10px 10%;
+
 }
 
 .titulo_contacto_white {
     font-size: 1.7rem;
+    text-shadow: 0 0 10px, 0 0 20px, 0 0 30px;
+}
+
+.contacto_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.redes_sociales {
+    margin: .5rem;
+}
+
+.redes_sociales img {
+    width: 1.5rem;
+    background-color: transparent;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(174deg) brightness(102%) contrast(102%);
 }
 
 /**Se esperan clases del componente aqui*/
-.contacto_div {}
 
 .contenedor_img_contacto {
     display: flex;
@@ -182,4 +236,21 @@ li {
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+
+.contacto2 form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+form label {
+    padding: 10px;
+}
+
+form input {
+    border: #fff solid 2px;
+    color: #fff;
+    height: 1.5rem;
 }

@@ -1,4 +1,4 @@
-import { Buttons, Tecnologias } from "../components/main";
+import { Buttons, Cards, Form, RedesS, Tecnologias } from "../components/main";
 import { TituloBlanco, TituloMorado } from "../components/nav";
 import { scrolling } from "../js/funciones";
 import programador from "../img/programador1.svg";
@@ -56,15 +56,7 @@ export function Main() {
             contenido_titulo="Junto algunas librerias como:"
             clase_titulo="titulo_tecnologias"
             clase_contenedor="div_tecnologias2"
-            lenguaje={[
-              "HTML",
-              "CSS",
-              "JavaScript",
-              "SQL",
-              "Java",
-              "Python",
-              "C++",
-            ]}
+            lenguaje={["React", "Bootstrap", "Entre otras"]}
           />
         </div>
       </section>
@@ -84,6 +76,21 @@ export function Main() {
             tecnologías son las piezas fundamentales que dan vida a mis ideas.
           </p>
         </div>
+        <div className="proyectos_cards">
+          <Cards
+            img={[
+              "https://th.bing.com/th/id/OIP.IUX1piM20lwyd9BG892YaAHaHn?pid=ImgDet&rs=1",
+              "https://th.bing.com/th/id/OIP.IUX1piM20lwyd9BG892YaAHaHn?pid=ImgDet&rs=1",
+              "https://th.bing.com/th/id/OIP.IUX1piM20lwyd9BG892YaAHaHn?pid=ImgDet&rs=1",
+            ]}
+            titulo={["Proyecto 1", "Proyecto 2", "Proyecto 3"]}
+            texto={[
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed magna nunc, viverra in odio non, eleifend euismod ipsum. Curabitur magna ex, ultrices vel arcu in, semper congue ligula. Fusce non tortor turpis. Etiam at finibus ipsum. Mauris vitae tincidunt lectus.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed magna nunc, viverra in odio non, eleifend euismod ipsum. Curabitur magna ex, ultrices vel arcu in, semper congue ligula. Fusce non tortor turpis. Etiam at finibus ipsum. Mauris vitae tincidunt lectus.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed magna nunc, viverra in odio non, eleifend euismod ipsum. Curabitur magna ex, ultrices vel arcu in, semper congue ligula. Fusce non tortor turpis. Etiam at finibus ipsum. Mauris vitae tincidunt lectus.",
+            ]}
+          />
+        </div>
         {/* Se espera contenido complementario */}
       </section>
       <section id="Contacto">
@@ -94,6 +101,32 @@ export function Main() {
               clase="titulo_contacto_white"
             />
             {/* Se espera contenido complementario aqui */}
+            <RedesS
+              red_social={[
+                "Linkedin",
+                "Instagram",
+                "Facebook",
+                "Twitter",
+                "WhatsApp",
+                "GitHub",
+              ]}
+              href={[
+                "https://mx.linkedin.com/",
+                "https://instagram.com",
+                "https://facebook.com",
+                "https://x.com",
+                "https://whatsapp.com",
+                "https://github.com",
+              ]}
+              src={[
+                "https://th.bing.com/th/id/R.c56ac73b4815a49008272f97d158b4e1?rik=zSkBLTkR4Ke2Cg&pid=ImgRaw&r=0",
+                "https://th.bing.com/th/id/R.4af42c87858bf65a60f6632aaf366a2f?rik=UxA5%2fEyi7b1yeg&pid=ImgRaw&r=0",
+                "https://gfsconsultores.com.mx/images/facebook_black.png",
+                "https://www.drodd.com/images14/x10.png",
+                "https://imagensemoldes.com.br/wp-content/uploads/2020/04/WhatsApp-%C3%8Dcone-Preto-PNG.png",
+                "https://d1fdloi71mui9q.cloudfront.net/wEwO2OpySGSPNjM5biot_undefined",
+              ]}
+            />
           </div>
           <div className="contenedor_img_contacto">
             <img
@@ -104,9 +137,11 @@ export function Main() {
           </div>
         </aside>
         <aside className="contacto2">
-          <TituloMorado contenido="Contacto" clase="" />
-          {/*  Se espera contenido complementario*/}
-          <Buttons contenido="Contactar" />
+          <TituloMorado contenido="Contacto" clase="titulo_complemento" />
+          <form>
+            <Form label_nombre={["Nombre", "Correo", "Asunto y descripción"]} />
+            <Buttons contenido="Contactar" />
+          </form>
         </aside>
       </section>
     </main>
