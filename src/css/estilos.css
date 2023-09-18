@@ -254,25 +254,36 @@ form input {
 
 /**Media Query's*/
 @media screen and (max-width:900px) {
-    header{
-        grid-template-columns: repeat(1,auto);
+    * {
+        align-items: center;
     }
+
+    header {
+        grid-template-columns: repeat(1, auto);
+    }
+
     #Sobre-Mi {
         flex-direction: column-reverse;
     }
-    .contenedor_tema{
+
+    .contenedor_tema {
         flex-direction: column-reverse;
         margin: auto;
         text-align: center;
         align-items: center;
     }
 
-    .proyectos_cards{
+    .tecnologias_contenido {
+        grid-template-columns: repeat(1, autogit );
+    }
+
+    .proyectos_cards {
         grid-template-columns: repeat(1, auto);
         text-align: center;
         align-items: center;
     }
-    #Contacto{
+
+    #Contacto {
         grid-template-columns: repeat(1, auto);
     }
 }
