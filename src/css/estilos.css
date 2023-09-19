@@ -20,6 +20,8 @@ header {
 .header_titulo {
     display: flex;
     text-shadow: 0 0 10px, 0 0 20px, 0 0 30px;
+    color: #fff;
+    animation: neon 2s ease-in-out infinite alternate;
 }
 
 /**Titulos*/
@@ -45,6 +47,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(4, auto);
     padding: 20px;
+    background-color: transparent;
 }
 
 .nav_url {
@@ -55,6 +58,14 @@ nav {
 
 .nav_url:hover {
     color: #9340ff;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
 }
 
 /**Sobre Mi*/
@@ -156,7 +167,8 @@ li {
 
 /**Proyectos*/
 .img_proyectos {
-    width: 50%;
+    width: 15%;
+    margin: auto;
 }
 
 .proyectos_cards {
@@ -193,7 +205,6 @@ li {
 #Contacto {
     display: grid;
     grid-template-columns: repeat(2, auto);
-
 }
 
 .titulo_contacto_white {
@@ -207,7 +218,6 @@ li {
     align-items: center;
     justify-content: center;
     margin: auto;
-
 }
 
 .redes_sociales {
@@ -269,7 +279,78 @@ form input {
     }
 
     header {
-        grid-template-columns: repeat(1, auto);
+        grid-template-columns: repeat(2, auto);
+    }
+
+    /**Nav Hamburguesa*/
+    .menu-icon {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 25px;
+    }
+
+    .bar {
+        background-color: #fff;
+        height: 3px;
+        width: 25px;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        background-color: #101728;
+        width: 90%;
+        position: absolute;
+        left: 0;
+        transition: top 0.3s, max-height 0.3s, opacity 0.3s, visibility 0.3s;
+        overflow-y: auto;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-menu.active {
+        top: 123px;
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        transition: top 0.3s, max-height 0.3s, opacity 0.3s, visibility 0.3s;
+    }
+
+    .nav-links {
+        padding: 20px;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    #menu-toggle:checked+.menu-icon .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    #menu-toggle:checked+.menu-icon .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked+.menu-icon .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    #menu-toggle:checked+.nav-menu {
+        top: 50px;
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
     }
 
     #Sobre-Mi {
@@ -300,15 +381,32 @@ form input {
     }
 
     #Contacto {
-        grid-template-columns: repeat(1, auto);
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .contacto_div {
         grid-template-columns: repeat(1, auto);
     }
 
+    .contacto_aside {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .contacto_div_links {
         display: flex;
         flex-direction: row;
+    }
+}
+
+/**KeyFrames*/
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 10px, 0 0 20px, 0 0 30px, 0 0 40px;
+    }
+
+    100% {
+        text-shadow: 0 0 2px, 0 0 4px, 0 0 6px, 0 0 8px;
     }
 }

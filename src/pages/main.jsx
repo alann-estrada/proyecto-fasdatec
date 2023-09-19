@@ -100,7 +100,7 @@ export function Main() {
         {/* Se espera contenido complementario */}
       </section>
       <section id="Contacto">
-        <aside>
+        <aside className="contacto_aside">
           <div className="contacto_div">
               <TituloBlanco
                 contenido="UserGitHub"
