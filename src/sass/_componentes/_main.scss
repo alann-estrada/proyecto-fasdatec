@@ -1,0 +1,322 @@
+@use "mixins" as m;
+/**Sobre Mi*/
+#Sobre-Mi {
+  @include m.flexDirection();
+  @include m.flexComplements(("items", "content"));
+  gap: 30px;
+  margin: 50px 10%;
+}
+
+.div_contenido {
+  @include m.grid($useTemplateColumns: false, $columns: 3);
+  @include m.margin-paddingValues($value: auto);
+  font-size: 1.5rem;
+}
+
+.titulo_sobre_mi {
+  @include m.margin-paddingValues($value: auto);
+  @include m.flexComplements(text);
+}
+
+.boton {
+  font-size: large;
+  margin: 35px auto;
+  background-image: linear-gradient(
+    to right,
+    var(--button_bg-primary) 0%,
+    var(--button_bg-seccondary) 51%,
+    var(--button_bg-primary) 100%
+  );
+  padding: 20px 65px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: var(--color);
+  border-radius: 50px;
+  box-shadow: 0 0 10px var(--color);
+
+  &:hover {
+    background-position: right center;
+    text-decoration: none;
+  }
+}
+
+/**Contenedores sobre el tema*/
+.Contenedor_Tema {
+  @include m.flexDirection($flex-direction: column);
+}
+
+.contenedor_tema {
+  @include m.flexDirection();
+
+  & p {
+    @include m.margin-paddingValues($value: auto);
+    @include m.margin-paddingValues(right);
+    font-size: 1.3rem;
+  }
+}
+
+.tecnologias_contenido {
+  @include m.grid($columns: 2);
+}
+
+.titulo_tecnologias {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.div_tecnologias {
+  font-size: 1.3rem;
+
+  & ul li {
+    @include m.margin-paddingValues($type: left);
+  }
+}
+
+.div_tecnologias2 {
+  font-size: 1.3rem;
+  @include m.flexComplements(
+    (
+      "text": end,
+    )
+  );
+
+  & ul li {
+    @include m.margin-paddingValues($type: right);
+  }
+}
+
+.language {
+  @include m.text-shadow(5, 10, 15);
+  @include m.margin-paddingValues($useMargin: false, $value: 5px);
+}
+
+/**Proyectos*/
+.img_proyectos {
+  width: 15%;
+  @include m.margin-paddingValues($value: auto);
+}
+
+.proyectos_cards {
+  @include m.grid($columns: 3);
+  margin: 60px auto;
+  gap: 20px;
+}
+
+.tituloMorado_cards {
+  font-size: 2rem;
+  margin: -20px auto;
+}
+
+.cards {
+  background-color: var(--cards_bg-color);
+  border-radius: 30px;
+
+  & img {
+    width: 14rem;
+    border-radius: 20px;
+    @include m.margin-paddingValues($value: 5%);
+  }
+  & p {
+    @include m.margin-paddingValues($value: 5%);
+  }
+  & * {
+    @extend .cards;
+  }
+}
+
+/**Contacto*/
+#Contacto {
+  @include m.grid($columns: 2);
+}
+
+.titulo_contacto_white {
+  font-size: 1.7rem;
+  @include m.text-shadow(10, 20, 30);
+}
+
+.contacto_div {
+  @include m.grid($columns: 2);
+  @include m.flexComplements(("items", "content"));
+  @include m.margin-paddingValues($value: auto);
+}
+
+.redes_sociales {
+  @include m.margin-paddingValues($value: 0.5rem);
+
+  & img {
+    width: 1.5rem;
+    background-color: transparent;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(174deg)
+      brightness(102%) contrast(102%);
+  }
+}
+
+.contenedor_img_contacto {
+  @include m.flexDirection();
+}
+
+.imagen_contacto {
+  @include m.margin-paddingValues($value: auto);
+  @include m.flexComplements(("items"));
+}
+
+.contacto2 {
+  @include m.flexDirection(column);
+  @include m.flexComplements(("text"));
+
+  & form {
+    @extend .contacto2;
+    @include m.margin-paddingValues($value: auto);
+
+    & label {
+      @include m.margin-paddingValues($useMargin: false, $value: 10px);
+    }
+
+    & input {
+      border: var(--color) solid 2px;
+      color: var(--color);
+      height: 1.5rem;
+    }
+  }
+}
+
+/**Media Query's*/
+@media screen and (max-width: 900px) {
+  * {
+    @include m.flexComplements(("items"));
+  }
+
+  .titulo_blanco {
+    @include m.flexComplements(("items"));
+    @include m.margin-paddingValues($value: auto);
+  }
+
+  nav {
+    @include m.grid($useGrid: false, $columns: 1);
+  }
+
+  header {
+    @include m.grid($useGrid: false, $columns: 2);
+  }
+
+  /**Nav Hamburguesa*/
+  .menu-icon {
+    cursor: pointer;
+    @include m.flexDirection(column);
+    @include m.flexComplements(
+      (
+        "content": space-between,
+      )
+    );
+    height: 25px;
+  }
+
+  .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .nav-menu {
+    background-color: #101728;
+    width: 90%;
+    position: absolute;
+    left: 0;
+    transition: top 0.3s, max-height 0.3s, opacity 0.3s, visibility 0.3s;
+    overflow-y: auto;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-menu.active {
+    top: 123px;
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    transition: top 0.3s, max-height 0.3s, opacity 0.3s, visibility 0.3s;
+  }
+
+  .nav-links {
+    @include m.margin-paddingValues($useMargin: false, $value: 20px);
+  }
+
+  .nav-links a {
+    color: var(--color);
+    text-decoration: none;
+    display: block;
+    @include m.margin-paddingValues($useMargin: false, $value: 10px);
+    @include m.margin-paddingValues($type: bottom, $value: 10px);
+  }
+
+  #menu-toggle {
+    display: none;
+
+    &:checked {
+      @for $i from 1 through 3 {
+        & + .menu-icon .bar:nth-child(#{$i}) {
+          @if $i == 1 {
+            @include m.navBurger(11px, 45deg);
+          } @else if $i == 2 {
+            opacity: 0;
+          } @else {
+            @include m.navBurger(-10px, -45deg);
+          }
+        }
+      }
+
+      & + .nav-menu {
+        top: 50px;
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  #Sobre-Mi {
+    @include m.flexDirection($flex: false, $flex-direction: column-reverse);
+    @include m.flexComplements(("text"));
+  }
+
+  .contenedor_tema {
+    @include m.flexDirection($flex: false, $flex-direction: column-reverse);
+    @include m.flexComplements(("text", "items"));
+    @include m.margin-paddingValues($value: auto);
+
+    & p {
+      @include m.margin-paddingValues($value: auto);
+      @include m.margin-paddingValues($type: right, $value: 5%);
+    }
+  }
+
+  .tecnologias_contenido {
+    @include m.grid($useGrid: false, $columns: 1);
+  }
+
+  .img_proyectos{
+    width: 40%;
+  }
+
+  .proyectos_cards {
+    @include m.grid($useGrid: false, $columns: 1);
+    @include m.flexComplements(("text", "items"));
+  }
+
+  #Contacto {
+    @include m.flexDirection($flex-direction: column-reverse);
+  }
+
+  .contacto_div {
+    @include m.grid($useGrid: false, $columns: 1);
+  }
+
+  .contacto_aside {
+    @include m.flexDirection($flex-direction: column-reverse);
+  }
+
+  .contacto_div_links {
+    @include m.flexDirection($flex-direction: row);
+  }
+}

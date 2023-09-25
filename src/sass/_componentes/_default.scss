@@ -1,0 +1,47 @@
+@use 'mixins' as m;
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+main {
+  margin: 10px 10%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+    width: 20rem;
+}
+
+/**Titulos*/
+.titulo_blanco {
+  padding: 20px;
+  @include m.margin-paddingValues($type:top, $value:auto);
+  @include m.margin-paddingValues($type:bottom, $value:auto);
+  font-family: var(--font-family);
+}
+
+.titulo_morado {
+  color: var(--title-color) !important;
+}
+
+/**KeyFrames*/
+@keyframes neon {
+  0% {
+    @include m.text-shadow(10, 20, 30, 40);
+  }
+
+  100% {
+    @include m.text-shadow(2, 4, 6, 8);
+  }
+}
+

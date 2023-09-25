@@ -1,0 +1,70 @@
+@mixin grid($useGrid: true, $useTemplateColumns: true, $columns) {
+  @if ($useGrid) {
+    display: grid;
+  }
+
+  @if ($useTemplateColumns) {
+    grid-template-columns: repeat($columns, auto);
+  } @else {
+    grid-template-rows: repeat($columns, auto);
+  }
+}
+
+@mixin margin-paddingValues($useMargin: true, $type: global, $value: 10%) {
+  $propriety: "";
+
+  @if ($useMargin) {
+    $propriety: "margin";
+  } @else {
+    $propriety: "padding";
+  }
+
+  @if ($type == "global") {
+    #{$propriety}: $value;
+  } @else {
+    #{$propriety}-#{$type}: $value;
+  }
+}
+
+@mixin flexDirection($flex-direction: none, $flex: true) {
+  @if ($flex-direction == none and $flex == true) {
+    display: flex;
+  } @else if($flex != true and $flex-direction != none) {
+    flex-direction: $flex-direction;
+  } @else {
+    display: flex;
+    flex-direction: $flex-direction;
+  }
+}
+
+@mixin flexComplements($complements) {
+  @each $complement, $value in $complements {
+    $value: if($value, $value, center);
+
+    @if $complement == "text" {
+      text-align: $value;
+    } @else if $complement == "items" {
+      align-items: $value;
+    } @else if $complement == "content" {
+      justify-content: $value;
+    }
+  }
+}
+
+@mixin text-shadow($pixels...) {
+  $shadows: ();
+
+  @each $pixel in $pixels {
+    $shadows: append($shadows, 0 0 #{$pixel}px, comma);
+  }
+
+  text-shadow: $shadows;
+}
+
+@mixin neon() {
+  animation: neon 2s ease-in-out infinite alternate;
+}
+
+@mixin navBurger($translateY, $rotate) {
+  transform: translateY(#{$translateY}) rotate(#{$rotate});
+}

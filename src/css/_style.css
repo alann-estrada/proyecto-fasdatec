@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #101728;
+    color: #fff;
+}
+
+main {
+    margin: 10px 10%;
+}
+
+/**Nav*/
+header {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding: 30px;
+    text-align: center;
+}
+
+.header_titulo {
+    display: flex;
+    text-shadow: 0 0 10px, 0 0 20px, 0 0 30px;
+    color: #fff;
+    animation: neon 2s ease-in-out infinite alternate;
+}
+
+/**Titulos*/
+.titulo_blanco {
+    padding: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titulo_morado {
+    color: #9340ff !important;
+}
+
+.titulo_complemento {
+    text-align: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    margin-top: 20px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding: 20px;
+    background-color: transparent;
+}
+
+.nav_url {
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav_url:hover {
+    color: #9340ff;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/**Sobre Mi*/
+#Sobre-Mi {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+    margin: 50px 10%;
+}
+
+.div_contenido {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+.titulo_sobre_mi {
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    width: 20rem;
+}
+
+/**Boton*/
+.boton {
+    font-size: large;
+    margin: 35px auto;
+    background-image: linear-gradient(to right, #7b4397 0%, #dc2430 51%, #7b4397 100%);
+    padding: 20px 65px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #eee;
+}
+
+.boton:hover {
+    background-position: right center;
+    text-decoration: none;
+}
+
+/**Contenedores sobre el tema*/
+.Contenedor_Tema {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_tema {
+    display: flex;
+
+}
+
+.contenedor_tema p {
+    margin: auto;
+    margin-right: 10%;
+    margin-right: 10%;
+    font-size: 1.3rem;
+}
+
+.tecnologias_contenido {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.titulo_tecnologias {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.div_tecnologias {
+    font-size: 1.3rem;
+}
+
+.div_tecnologias2 ul li {
+    margin-right: 10%;
+}
+
+.div_tecnologias ul li {
+    margin-left: 10%;
+}
+
+.div_tecnologias2 {
+    font-size: 1.3rem;
+    text-align: end;
+}
+
+li {
+    list-style: none;
+}
+
+.language {
+    text-shadow: 0 0 5px, 0 0 10px, 0 0 15px;
+    padding: 5px;
+}
+
+/**Proyectos*/
+.img_proyectos {
+    width: 15%;
+    margin: auto;
+}
+
+.proyectos_cards {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin: 60px auto;
+    gap: 20px;
+}
+
+.tituloMorado_cards {
+    font-size: 2rem;
+    margin: -20px auto;
+}
+
+.cards,
+.cards * {
+    background-color: #0f1819;
+    border-radius: 30px;
+}
+
+.cards p {
+    margin: 5%;
+}
+
+.cards img {
+    width: 14rem;
+    border-radius: 20px;
+    margin: 5%;
+}
+
+
+
+/**Contacto*/
+#Contacto {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.titulo_contacto_white {
+    font-size: 1.7rem;
+    text-shadow: 0 0 10px, 0 0 20px, 0 0 30px;
+}
+
+.contacto_div {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.redes_sociales {
+    margin: .5rem;
+}
+
+.redes_sociales img {
+    width: 1.5rem;
+    background-color: transparent;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(174deg) brightness(102%) contrast(102%);
+}
+
+
+.contenedor_img_contacto {
+    display: flex;
+}
+
+.imagen_contacto {
+    margin: auto;
+    align-items: center;
+}
+
+.contacto2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto2 form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+form label {
+    padding: 10px;
+}
+
+form input {
+    border: #fff solid 2px;
+    color: #fff;
+    height: 1.5rem;
+}
+
+/**Media Query's*/
+@media screen and (max-width:900px) {
+    * {
+        align-items: center;
+    }
+
+    .titulo_blanco {
+        text-align: center;
+        margin: auto;
+    }
+
+    nav {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    header {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    /**Nav Hamburguesa*/
+    .menu-icon {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 25px;
+    }
+
+    .bar {
+        background-color: #fff;
+        height: 3px;
+        width: 25px;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* #menu-toggle {
+        display: none;
+    } */
+
+    .nav-menu {
+        background-color: #101728;
+        width: 90%;
+        position: absolute;
+        left: 0;
+        transition: top 0.3s, max-height 0.3s, opacity 0.3s, visibility 0.3s;
+        overflow-y: auto;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-menu.active {
+        top: 123px;
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        transition: top 0.3s, max-height 0.3s, opacity 0.3s, visibility 0.3s;
+    }
+
+    .nav-links {
+        padding: 20px;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    /* #menu-toggle:checked + .menu-icon .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    #menu-toggle:checked + .menu-icon .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked + .menu-icon .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    } */
+
+    /* #menu-toggle:checked+.nav-menu {
+        top: 50px;
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+    } */
+
+    #Sobre-Mi {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .contenedor_tema p {
+        margin: auto;
+        margin-right: 5%;
+    }
+
+    .contenedor_tema {
+        flex-direction: column-reverse;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .tecnologias_contenido {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .proyectos_cards {
+        grid-template-columns: repeat(1, auto);
+        text-align: center;
+        align-items: center;
+    }
+
+    #Contacto {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contacto_div {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .contacto_aside {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contacto_div_links {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/**KeyFrames*/
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 10px, 0 0 20px, 0 0 30px, 0 0 40px;
+    }
+
+    100% {
+        text-shadow: 0 0 2px, 0 0 4px, 0 0 6px, 0 0 8px;
+    }
+}

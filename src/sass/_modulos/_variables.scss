@@ -1,0 +1,17 @@
+$bg-color: #101728;
+$color: #fff;
+$title-color: #9340ff;
+$button_bg-primary: #7b4397;
+$button_bg-seccondary: #dc2430;
+$cards_bg-color: #0f1819;
+$font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+:root {
+  --bg-color: #{$bg-color};
+  --color: #{$color};
+  --title-color: #{$title-color};
+  --button_bg-primary: #{$button_bg-primary};
+  --button_bg-seccondary: #{$button_bg-seccondary};
+  --cards_bg-color: #{$cards_bg-color};
+  --font-family:#{$font-family};
+}

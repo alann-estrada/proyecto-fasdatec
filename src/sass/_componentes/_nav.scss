@@ -1,0 +1,46 @@
+@use 'mixins' as m;
+@use 'default' as d;
+header{
+    @include m.grid($columns:2);
+    padding: 30px;
+    @include m.flexComplements(text);
+}
+
+.header_titulo{
+    @include m.flexDirection();
+    @include m.text-shadow(10, 20, 30);
+    color: var(--color);
+    @include m.neon();
+}
+
+.titulo_complemento {
+    @include m.flexComplements(text);
+    @include m.flexComplements(content);
+    font-size: 2.2rem;
+    margin-top: 20px;
+}
+
+nav{
+    @include m.grid($columns:4);
+    padding: 20px;
+    background-color: transparent;
+}
+
+.nav_url{
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover{
+        color: var(--title-color);
+    }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
